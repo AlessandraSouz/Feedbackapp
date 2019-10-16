@@ -1,4 +1,6 @@
 ﻿using System;
+using SQLite;
+
 namespace Feedbackapp.Model
 {
     public class User
@@ -8,7 +10,8 @@ namespace Feedbackapp.Model
         private string email;
         private string password;
 
-        public int Id { get => id; set => id = value; }
+        [PrimaryKey, AutoIncrement]
+        protected int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Email { get => email; set => email = value; }
         public string Password { get => password; set => password = value; }
