@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.SignUpPage" Title="CADASTRO">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.SignUpPage">
+    <NavigationPage.TitleView>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Cadastro" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Padding="10">
             <Image HorizontalOptions="Center" VerticalOptions="Start" Source=""/> <!--DataBinding para VM-->

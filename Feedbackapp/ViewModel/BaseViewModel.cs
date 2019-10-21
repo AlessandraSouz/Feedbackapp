@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Xamarin.Forms;
 
 namespace Feedbackapp.ViewModel
 {
@@ -18,6 +19,13 @@ namespace Feedbackapp.ViewModel
             OnPropertyChanged(propertyName);
             return true;
         }
+
+        protected void DisplayAlert(string title, string message, string cancel)
+        {
+            Application.Current.MainPage.DisplayAlert(title, message, cancel);
+        }
+
+        protected readonly INavigation Navigation = Application.Current.MainPage.Navigation;
 
         protected void OnPropertyChanged(string propertyName)
         {

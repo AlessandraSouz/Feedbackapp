@@ -1,23 +1,20 @@
 ﻿<Properties StartupConfiguration="{83552A21-9E1F-4EC1-9F97-59AEDB1F9B57}|Default">
-  <MonoDevelop.Ide.ItemProperties.Feedbackapp FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Feedbackapp.iOS FirstBuild="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8478EA84-1B73-4A9F-B962-D1B06058908C" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/ViewModel/SignUpPageViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/View/EvaluationPage.xaml">
     <Files>
-      <File FileName="Feedbackapp/ViewModel/SignUpPageViewModel.cs" Line="33" Column="45" />
-      <File FileName="Feedbackapp/View/SignUpPage.xaml" Line="23" Column="52" />
-      <File FileName="Feedbackapp/ViewModel/BaseViewModel.cs" Line="4" Column="1" />
+      <File FileName="Feedbackapp/ViewModel/EvaluationViewModel.cs" Line="1" Column="1" />
+      <File FileName="Feedbackapp/View/EvaluationPage.xaml" Line="48" Column="50" />
+      <File FileName="Feedbackapp/View/SignUpPage.xaml" Line="7" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Feedbackapp" expanded="True">
             <Node name="Feedbackapp" expanded="True">
-              <Node name="Functions" expanded="True" />
-              <Node name="Model" expanded="True" />
-              <Node name="View" expanded="True" />
-              <Node name="ViewModel" expanded="True">
-                <Node name="SignUpPageViewModel.cs" selected="True" />
+              <Node name="View" expanded="True">
+                <Node name="EvaluationPage.xaml" selected="True" />
               </Node>
+              <Node name="ViewModel" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -26,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android FirstBuild="True" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

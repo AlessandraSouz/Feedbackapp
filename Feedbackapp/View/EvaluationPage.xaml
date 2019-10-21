@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.EvaluationPage">
+    <NavigationPage.TitleView>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Avaliação" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Turma: " Grid.Column="0" Grid.Row="0"/>
+                <Entry Text="{Binding Turma}" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="IES: " Grid.Column="0" Grid.Row="1"/>
+                <Entry Text="{Binding IES}" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="Turno: " Grid.Column="0" Grid.Row="2"/>
+                <Entry Text="{Binding Turno}" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="Curso: " Grid.Column="0" Grid.Row="3"/>
+                <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="3"/>
+            </Grid>
+
+                <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large"/>
+                <Entry Text="{Binding Pergunta}" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="A" Grid.Column="0"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

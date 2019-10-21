@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.AuthenticationPage">
+    <NavigationPage.TitleView>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Login" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Image HorizontalOptions="Center" VerticalOptions="Start" Source=""/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Email:" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Senha: " Grid.Column="0" Grid.Row="1"/>
+                <Entry Text="{Binding Email}" Placeholder="exemplo@exemplo.com" Grid.Column="1" Grid.Row="0"/>
+                <Entry Text="{Binding Password}" Placeholder="******" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Button Command="{Binding ForgotPwdCommand}" Text="Recuperar senha" HorizontalOptions="Center" VerticalOptions="End"/>
+
+            <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" HorizontalOptions="Center" VerticalOptions="End"/>
+
+            <Button Command="{Binding LoginCommand}" Text="Entrar" BackgroundColor="" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+       
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

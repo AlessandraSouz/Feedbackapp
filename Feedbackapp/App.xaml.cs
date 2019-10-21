@@ -1,4 +1,5 @@
 ﻿using System;
+using Feedbackapp.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Feedbackapp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new SignUpPage()) { BarBackgroundColor = Color.FromHex("#B9B9B9"), BarTextColor = Color.FromHex("#A2A2A2") };
         }
 
         protected override void OnStart()
