@@ -9,17 +9,9 @@ namespace Feedbackapp.ViewModel
     public class AuthenticationPageViewModel : BaseViewModel
     {
         private String email;
-        public String Email
-        {
-            get { return email; }
-            set { SetProperty(ref email, value); }
-        }
+        public String Email { get { return email; } set { SetProperty(ref email, value); } }
         private String password;
-        public String Password
-        {
-            get { return password; }
-            set { SetProperty(ref password, value); }
-        }
+        public String Password { get { return password; } set { SetProperty(ref password, value); } }
         public Command ForgotPwdCommand { get; set; }
         public Command LoginCommand { get; set; }
         public Command SignUpCommand { get; set; }

@@ -2,51 +2,72 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.EvaluationPage">
     <NavigationPage.TitleView>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Label Text="Avaliação" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Avaliação" HorizontalOptions="Center" VerticalOptions="Center" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="7*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-                <Label Text="Turma: " Grid.Column="0" Grid.Row="0"/>
-                <Entry Text="{Binding Turma}" Grid.Column="1" Grid.Row="0"/>
-                <Label Text="IES: " Grid.Column="0" Grid.Row="1"/>
-                <Entry Text="{Binding IES}" Grid.Column="1" Grid.Row="1"/>
-                <Label Text="Turno: " Grid.Column="0" Grid.Row="2"/>
-                <Entry Text="{Binding Turno}" Grid.Column="1" Grid.Row="2"/>
-                <Label Text="Curso: " Grid.Column="0" Grid.Row="3"/>
-                <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="3"/>
-            </Grid>
+                    <Label Text="Turma: " Grid.Column="0" Grid.Row="0" />
+                    <Entry Text="{Binding Turma}" Grid.Column="1" Grid.Row="0" />
+                    <Label Text="IES: " Grid.Column="0" Grid.Row="1" />
+                    <Entry Text="{Binding IES}" Grid.Column="1" Grid.Row="1" />
+                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" />
+                    <Entry Text="{Binding Turno}" Grid.Column="1" Grid.Row="2" />
+                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" />
+                    <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="3" />
+                </Grid>
 
-                <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large"/>
-                <Entry Text="{Binding Pergunta}" />
+                <Label Text="Perguntas salvas:"/>
+                <CollectionView ItemsSource="{Binding ListaPerguntas}" HeightRequest="150">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding }" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Text="A" Grid.Column="0"/>
-            </Grid>
-        </StackLayout>
+                <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" />
+                <Entry Text="{Binding Pergunta}" HeightRequest="200" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Text="A: " Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="B: " Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="C: " Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="D: " Grid.Row="0" Grid.Column="0"/>
+                    <Entry Text="{Binding AlternativaA}" Grid.Row="0" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaB}" Grid.Row="0" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaC}" Grid.Row="0" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaD}" Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+
+                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Green" FontSize="32" Margin="15" Command="{Binding AddQuestion}" />
+                <Button Text="Compartilhar" VerticalOptions="End" Command="{Binding ShareQuestion}" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
