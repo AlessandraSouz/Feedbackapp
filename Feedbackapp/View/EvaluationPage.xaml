@@ -56,13 +56,13 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Text="A: " Grid.Row="0" Grid.Column="0"/>
-                    <Label Text="B: " Grid.Row="0" Grid.Column="0"/>
-                    <Label Text="C: " Grid.Row="0" Grid.Column="0"/>
-                    <Label Text="D: " Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="B: " Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="C: " Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="D: " Grid.Row="3" Grid.Column="0"/>
                     <Entry Text="{Binding AlternativaA}" Grid.Row="0" Grid.Column="1"/>
-                    <Entry Text="{Binding AlternativaB}" Grid.Row="0" Grid.Column="1"/>
-                    <Entry Text="{Binding AlternativaC}" Grid.Row="0" Grid.Column="1"/>
-                    <Entry Text="{Binding AlternativaD}" Grid.Row="0" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaB}" Grid.Row="1" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaC}" Grid.Row="2" Grid.Column="1"/>
+                    <Entry Text="{Binding AlternativaD}" Grid.Row="3" Grid.Column="1"/>
                 </Grid>
 
                 <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Green" FontSize="32" Margin="15" Command="{Binding AddQuestion}" />

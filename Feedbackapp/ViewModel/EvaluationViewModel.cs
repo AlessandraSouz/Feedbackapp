@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Feedbackapp.Model;
 using Xamarin.Forms;
 
 namespace Feedbackapp.ViewModel
@@ -27,7 +28,7 @@ namespace Feedbackapp.ViewModel
         private ObservableCollection<string> listaPerguntas;
         public ObservableCollection<string> ListaPerguntas { get { return listaPerguntas; } set { SetProperty(ref listaPerguntas, value); } }
 
-        private ObservableCollection<Pergunta> LsPerguntas { get; set; }
+        private ObservableCollection<Question> LsPerguntas { get; set; }
 
         public Command AddQuestion { get; private set; }
         public Command ShareQuestion { get; private set; }
@@ -40,7 +41,7 @@ namespace Feedbackapp.ViewModel
 
         private void AddQuestionTapped()
         {
-            var pergunta = new Pergunta
+            var pergunta = new Question
             {
                 Pergunta = Pergunta,
                 AlternativaA = AlternativaA,
