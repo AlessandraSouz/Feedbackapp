@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Feedbackapp.Functions;
 using Feedbackapp.Model;
 using Xamarin.Forms;
 
@@ -29,6 +30,7 @@ namespace Feedbackapp.ViewModel
         public ObservableCollection<string> ListaPerguntas { get { return listaPerguntas; } set { SetProperty(ref listaPerguntas, value); } }
 
         private ObservableCollection<Question> LsPerguntas { get; set; }
+        private Evaluation LsEvaluations { get; set; }
 
         public Command AddQuestion { get; private set; }
         public Command ShareQuestion { get; private set; }
@@ -55,11 +57,27 @@ namespace Feedbackapp.ViewModel
             Pergunta = String.Empty;
         }
 
-        private void ShareQuestionTapped()
+        private async void ShareQuestionTapped()
         {
-            //criar model de perguntas com alternativas salvas
-            //navegar pra próxima tela com lista salva
-            Navigation.PushAsync(new ShareQuestionPage());
+            Evaluation evaluation = new Evaluation
+            {
+                Curso = Curso,
+                Ies = IES,
+                Perguntas = LsPerguntas,
+                PIN = GerarPIN(),
+                Turma = Turma
+            };
+
+            await WebClientFunctions.Post(evaluation);
+            Navigation.PushAsync(new ShareQuestionPage(evaluation.PIN));
+        }
+
+        private string GerarPIN()
+        {
+            Random rd = new Random();
+            int pin = rd.Next(0, 999999);
+            var result = pin.ToString().PadLeft(6, '0');
+            return result;
         }
     }
 }
