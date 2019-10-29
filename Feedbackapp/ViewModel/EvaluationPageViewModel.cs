@@ -2,11 +2,12 @@
 using System.Collections.ObjectModel;
 using Feedbackapp.Functions;
 using Feedbackapp.Model;
+using Feedbackapp.View;
 using Xamarin.Forms;
 
 namespace Feedbackapp.ViewModel
 {
-    public class EvaluationViewModel : BaseViewModel
+    public class EvaluationPageViewModel : BaseViewModel
     {
         private string turma;
         public string Turma { get { return turma; } set { SetProperty(ref turma, value); } }
@@ -30,12 +31,11 @@ namespace Feedbackapp.ViewModel
         public ObservableCollection<string> ListaPerguntas { get { return listaPerguntas; } set { SetProperty(ref listaPerguntas, value); } }
 
         private ObservableCollection<Question> LsPerguntas { get; set; }
-        private Evaluation LsEvaluations { get; set; }
 
         public Command AddQuestion { get; private set; }
         public Command ShareQuestion { get; private set; }
 
-        public EvaluationViewModel()
+        public EvaluationPageViewModel()
         {
             AddQuestion = new Command(AddQuestionTapped);
             ShareQuestion = new Command(ShareQuestionTapped);
@@ -53,7 +53,6 @@ namespace Feedbackapp.ViewModel
             };
 
             LsPerguntas.Add(pergunta);
-            ListaPerguntas.Add(Pergunta.Substring(0, 25) + "...");
             Pergunta = String.Empty;
         }
 
@@ -69,7 +68,7 @@ namespace Feedbackapp.ViewModel
             };
 
             await WebClientFunctions.Post(evaluation);
-            Navigation.PushAsync(new ShareQuestionPage(evaluation.PIN));
+            await Navigation.PushAsync(new ShareQuestionPage(evaluation.PIN));
         }
 
         private string GerarPIN()
