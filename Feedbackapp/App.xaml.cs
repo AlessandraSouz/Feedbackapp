@@ -11,7 +11,7 @@ namespace Feedbackapp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SignUpPage()) { BarBackgroundColor = Color.FromHex("#B9B9B9"), BarTextColor = Color.FromHex("#A2A2A2") };
+            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.FromHex("#B9B9B9"), BarTextColor = Color.FromHex("#A2A2A2") };
         }
 
         protected override void OnStart()

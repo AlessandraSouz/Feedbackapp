@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{83552A21-9E1F-4EC1-9F97-59AEDB1F9B57}|Default">
   <MonoDevelop.Ide.ItemProperties.Feedbackapp.iOS FirstBuild="True" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8478EA84-1B73-4A9F-B962-D1B06058908C" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/ViewModel/EvaluationPageViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/View/MainPage.xaml">
     <Files>
-      <File FileName="Feedbackapp/ViewModel/EvaluationViewModel.cs" Line="44" Column="9" />
+      <File FileName="Feedbackapp/View/MainPage.xaml" Line="8" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Feedbackapp" expanded="True">
             <Node name="Feedbackapp" expanded="True">
-              <Node name="View" expanded="True" />
-              <Node name="ViewModel" expanded="True">
-                <Node name="EvaluationPageViewModel.cs" selected="True" />
-              </Node>
+              <Node name="View" expanded="True" selected="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
             </Node>
           </Node>
         </State>

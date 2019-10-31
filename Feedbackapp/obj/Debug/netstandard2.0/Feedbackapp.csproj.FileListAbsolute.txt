@@ -12,3 +12,5 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/AuthenticationPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ShareQuestionPage.xaml.g.cs
