@@ -4,8 +4,11 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/bin/Debug/netstandard2.0/Feedbackapp.pdb
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/AuthenticationPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ClassEvaluationPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationHistoryPage.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationPage.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MainPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MenuPage.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/PinEvaluationPage.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ShareQuestionPage.xaml.g.cs
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/SignUpPage.xaml.g.cs
@@ -16,6 +19,3 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.csprojAssemblyReference.cache
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ClassEvaluationPage.xaml.g.cs
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationHistoryPage.xaml.g.cs
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MenuPage.xaml.g.cs

@@ -57,7 +57,6 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/mipmap-xxhdpi/launcher_foreground.png
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/mipmap-xxxhdpi/launcher_foreground.png
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/drawable/icon.png
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/drawable/bad.png
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/drawable/excellent.png
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/drawable/good.png
@@ -344,11 +343,11 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md5f92e0daf340890c9667469657ee2ece8/LabelRenderer.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md5f92e0daf340890c9667469657ee2ece8/ImageRenderer.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/android/support/transition/R.java
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/android/support/design/widget/Snackbar_SnackbarActionClickImplementor.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md5dcb6eccdc824e0677ffae8ccdde42930/KeepAliveService.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md5dcb6eccdc824e0677ffae8ccdde42930/CustomTabsServiceConnectionImpl.java
-/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/android/support/design/R.java
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/android/support/design/widget/Snackbar_SnackbarActionClickImplementor.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md5d1299f81d74e47df1698cf2604b055a8/MainActivity.java
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/android/support/design/R.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md51558244f76c53b6aeda52c8a337f2c37/ShellSearchViewAdapter_ObjectWrapper.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md51558244f76c53b6aeda52c8a337f2c37/NativeViewWrapperRenderer.java
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/android/src/md51558244f76c53b6aeda52c8a337f2c37/EdgeSnapHelper.java

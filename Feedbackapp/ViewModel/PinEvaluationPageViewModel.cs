@@ -1,4 +1,6 @@
-﻿using Feedbackapp.Functions;
+﻿using System.Collections.Generic;
+using Feedbackapp.Functions;
+using Feedbackapp.Model;
 using Feedbackapp.View;
 using Xamarin.Forms;
 
@@ -18,7 +20,12 @@ namespace Feedbackapp.ViewModel
 
         public async void EvaluateCommandTapped()
         {
-            var evaluation = await WebClientFunctions.GetEvaluation(PIN);
+            //TODO: publicar WebAPI para utilizar funções de comunicação Http
+            //var evaluation = await WebClientFunctions.GetEvaluation(PIN);
+            var evaluation = new Evaluation
+            {
+                Perguntas = new List<Question> { new Question { Pergunta = "Como foi a aula de hoje?" } },
+            };
             await NavigationFunctions.PushAsync(new ClassEvaluationPage(evaluation));
         }
     }

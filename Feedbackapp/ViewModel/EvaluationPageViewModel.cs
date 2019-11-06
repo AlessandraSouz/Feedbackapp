@@ -52,7 +52,8 @@ namespace Feedbackapp.ViewModel
                 Turma = Turma
             };
 
-            await WebClientFunctions.PostEvaluation(evaluation);
+            //TODO: publicar WebAPI para utilizar funções de comunicação Http
+            //await WebClientFunctions.PostEvaluation(evaluation);
             await NavigationFunctions.PushAsync(new ShareQuestionPage(evaluation.PIN));
         }
 

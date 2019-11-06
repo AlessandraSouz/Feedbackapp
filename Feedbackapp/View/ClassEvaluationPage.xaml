@@ -6,10 +6,10 @@
             <Entry Text="{Binding Name}" Placeholder="(informação opcional)" />
             <Label Margin="0,20,0,0" Text="{Binding Pergunta}" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10">
-                <ImageButton Source="bad.png" Command="{Binding BadCommand}" />
-                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" />
-                <ImageButton Source="good.png" Command="{Binding GoodCommand}" />
-                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" />
+                <ImageButton Source="bad.png" Command="{Binding BadCommand}" Aspect="AspectFit" HeightRequest="42" />
+                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" Aspect="AspectFit" HeightRequest="42" />
+                <ImageButton Source="good.png" Command="{Binding GoodCommand}" Aspect="AspectFit" HeightRequest="42" />
+                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" Aspect="AspectFit" HeightRequest="42" />
             </StackLayout>
             <Button Text="Avaliar!" Command="{Binding EvaluateCommand}" VerticalOptions="EndAndExpand" Margin="10" />
         </StackLayout>

@@ -10,9 +10,6 @@ namespace Feedbackapp.ViewModel
         private Evaluation _evaluation;
         public Evaluation Evaluation { get { return _evaluation; } set { SetProperty(ref _evaluation, value); } }
 
-        private Evaluation _classEvaluation;
-        public Evaluation ClassEvaluation { get { return _classEvaluation; } set { SetProperty(ref _classEvaluation, value); } }
-
         private string _pergunta;
         public string Pergunta { get { return _pergunta; } set { SetProperty(ref _pergunta, value); } }
 
@@ -30,7 +27,7 @@ namespace Feedbackapp.ViewModel
         {
             Evaluation = evaluation;
             Index = 0;
-            Pergunta = ClassEvaluation.Perguntas.ToList()[Index].Pergunta;
+            Pergunta = Evaluation.Perguntas.ToList()[Index].Pergunta;
 
             BadCommand = new Command(BadCommandTapped);
             RegularCommand = new Command(RegularCommandTapped);
@@ -42,40 +39,41 @@ namespace Feedbackapp.ViewModel
 
         public async void BadCommandTapped()
         {
-            Evaluation.Perguntas.ToList()[Index].Feedback = "Ruim";
-            IndexPlus();
+            //Evaluation.Perguntas.ToList()[Index].Feedback = "Ruim";
+            //IndexPlus();
         }
 
         public async void RegularCommandTapped()
         {
-            Evaluation.Perguntas.ToList()[Index].Feedback = "Regular";
-            IndexPlus();
+            //Evaluation.Perguntas.ToList()[Index].Feedback = "Regular";
+            //IndexPlus();
         }
 
         public async void GoodCommandTapped()
         {
-            Evaluation.Perguntas.ToList()[Index].Feedback = "Bom";
-            IndexPlus();
+            //Evaluation.Perguntas.ToList()[Index].Feedback = "Bom";
+            //IndexPlus();
         }
 
         public async void ExcellentCommandTapped()
         {
-            Evaluation.Perguntas.ToList()[Index].Feedback = "Excelente";
-            IndexPlus();
+            //Evaluation.Perguntas.ToList()[Index].Feedback = "Excelente";
+            //IndexPlus();
         }
 
         public void IndexPlus()
         {
-            if (Index < ClassEvaluation.Perguntas.Count())
+            if (Index < Evaluation.Perguntas.Count())
             {
                 Index++;
-                Pergunta = ClassEvaluation.Perguntas.ToList()[Index].Pergunta;
+                Pergunta = Evaluation.Perguntas.ToList()[Index].Pergunta;
             }
         }
 
         public async void EvaluateCommandTapped()
         {
-            await WebClientFunctions.PostEvaluation(Evaluation);
+            //TODO: publicar WebAPI para utilizar funções de comunicação Http
+            //await WebClientFunctions.PostEvaluation(Evaluation);
             DisplayAlert("Sucesso!", "Sua avaliação foi entregue com sucesso!", "Ok");
             await NavigationFunctions.PopAsync();
         }
