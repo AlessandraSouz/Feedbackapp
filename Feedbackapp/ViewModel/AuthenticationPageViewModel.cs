@@ -8,18 +8,16 @@ namespace Feedbackapp.ViewModel
 {
     public class AuthenticationPageViewModel : BaseViewModel
     {
-        private String email;
-        public String Email { get { return email; } set { SetProperty(ref email, value); } }
-        private String password;
-        public String Password { get { return password; } set { SetProperty(ref password, value); } }
-        public Command ForgotPwdCommand { get; set; }
+        private String _email;
+        public String Email { get { return _email; } set { SetProperty(ref _email, value); } }
+        private String _password;
+        public String Password { get { return _password; } set { SetProperty(ref _password, value); } }
         public Command LoginCommand { get; set; }
         public Command SignUpCommand { get; set; }
 
         public AuthenticationPageViewModel()
         {
             LoginCommand = new Command(LoginTapped);
-            ForgotPwdCommand = new Command(ForgotPwdTapped);
             SignUpCommand = new Command(SignUpTapped);
         }
 
@@ -37,11 +35,6 @@ namespace Feedbackapp.ViewModel
                 await Navigation.PushAsync(new AuthenticationPage());
             else
                 DisplayAlert("Erro", "Usuário não cadastrado", "Ok!");
-        }
-
-        private async void ForgotPwdTapped()
-        {
-            await Navigation.PushAsync(new ForgotPwdPage());
         }
 
         private async void SignUpTapped()

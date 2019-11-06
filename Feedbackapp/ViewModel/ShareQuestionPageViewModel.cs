@@ -3,8 +3,8 @@ namespace Feedbackapp.ViewModel
 {
     public class ShareQuestionPageViewModel : BaseViewModel
     {
-        private string pin;
-        public string PIN { get { return pin; } set { SetProperty(ref pin, value); } }
+        private string _pin;
+        public string PIN { get { return _pin; } set { SetProperty(ref _pin, value); } }
 
         public ShareQuestionPageViewModel(string sharePin)
         {

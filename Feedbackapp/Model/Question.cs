@@ -5,29 +5,20 @@ namespace Feedbackapp.Model
     {
         private int id;
         private string pergunta;
-        private string alternativaA;
-        private string alternativaB;
-        private string alternativaC;
-        private string alternativaD;
+        private string feedback;
 
         public int Id { get => id; set => id = value; }
         public string Pergunta { get => pergunta; set => pergunta = value; }
-        public string AlternativaA { get => alternativaA; set => alternativaA = value; }
-        public string AlternativaB { get => alternativaB; set => alternativaB = value; }
-        public string AlternativaC { get => alternativaC; set => alternativaC = value; }
-        public string AlternativaD { get => alternativaD; set => alternativaD = value; }
+        public string Feedback { get => feedback; set => feedback = value; }
 
-        public Question(int id, string pergunta, string alternativaA, string alternativaB, string alternativaC, string alternativaD)
+        public Question(int id, string pergunta, string feedback)
         {
             Id = id;
             Pergunta = pergunta;
-            AlternativaA = alternativaA;
-            AlternativaB = alternativaB;
-            AlternativaC = alternativaC;
-            AlternativaD = alternativaD;
+            Feedback = feedback;
         }
 
-        public Question(): this(0,"","","","","")
+        public Question() : this(0, "", "")
         {
         }
     }

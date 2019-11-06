@@ -31,7 +31,7 @@ namespace Feedbackapp.Functions
             return result;
         }
 
-        public static async Task Post(Evaluation evaluation)
+        public static async Task PostEvaluation(Evaluation evaluation)
         {
             var jsonContent = JsonConvert.SerializeObject(evaluation);
             var content = new StringContent(jsonContent);

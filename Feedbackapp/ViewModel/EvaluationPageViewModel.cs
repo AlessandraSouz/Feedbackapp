@@ -9,26 +9,16 @@ namespace Feedbackapp.ViewModel
 {
     public class EvaluationPageViewModel : BaseViewModel
     {
-        private string turma;
-        public string Turma { get { return turma; } set { SetProperty(ref turma, value); } }
-        private string ies;
-        public string IES { get { return ies; } set { SetProperty(ref ies, value); } }
-        private string turno;
-        public string Turno { get { return turno; } set { SetProperty(ref turno, value); } }
-        private string curso;
-        public string Curso { get { return curso; } set { SetProperty(ref curso, value); } }
-        private string pergunta;
-        public string Pergunta { get { return pergunta; } set { SetProperty(ref pergunta, value); } }
-        private string alternativaA;
-        public string AlternativaA { get { return alternativaA; } set { SetProperty(ref alternativaA, value); } }
-        private string alternativaB;
-        public string AlternativaB { get { return alternativaB; } set { SetProperty(ref alternativaB, value); } }
-        private string alternativaC;
-        public string AlternativaC { get { return alternativaC; } set { SetProperty(ref alternativaC, value); } }
-        private string alternativaD;
-        public string AlternativaD { get { return alternativaD; } set { SetProperty(ref alternativaD, value); } }
-        private ObservableCollection<string> listaPerguntas;
-        public ObservableCollection<string> ListaPerguntas { get { return listaPerguntas; } set { SetProperty(ref listaPerguntas, value); } }
+        private string _turma;
+        public string Turma { get { return _turma; } set { SetProperty(ref _turma, value); } }
+        private string _ies;
+        public string IES { get { return _ies; } set { SetProperty(ref _ies, value); } }
+        private string _turno;
+        public string Turno { get { return _turno; } set { SetProperty(ref _turno, value); } }
+        private string _curso;
+        public string Curso { get { return _curso; } set { SetProperty(ref _curso, value); } }
+        private string _pergunta;
+        public string Pergunta { get { return _pergunta; } set { SetProperty(ref _pergunta, value); } }
 
         private ObservableCollection<Question> LsPerguntas { get; set; }
 
@@ -43,14 +33,7 @@ namespace Feedbackapp.ViewModel
 
         private void AddQuestionTapped()
         {
-            var pergunta = new Question
-            {
-                Pergunta = Pergunta,
-                AlternativaA = AlternativaA,
-                AlternativaB = AlternativaB,
-                AlternativaC = AlternativaC,
-                AlternativaD = AlternativaD,
-            };
+            var pergunta = new Question { Pergunta = Pergunta };
 
             LsPerguntas.Add(pergunta);
             Pergunta = String.Empty;
@@ -67,7 +50,7 @@ namespace Feedbackapp.ViewModel
                 Turma = Turma
             };
 
-            await WebClientFunctions.Post(evaluation);
+            await WebClientFunctions.PostEvaluation(evaluation);
             await Navigation.PushAsync(new ShareQuestionPage(evaluation.PIN));
         }
 

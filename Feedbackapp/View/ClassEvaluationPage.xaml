@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.ClassEvaluationPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Nome:" TextColor="Black" FontSize="12" />
+            <Entry Text="{Binding Name}" Placeholder="(informação opcional)" />
+            <Label Margin="0,20,0,0" Text="{Binding Pergunta}" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10">
+                <ImageButton Source="bad.png" Command="{Binding BadCommand}" />
+                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" />
+                <ImageButton Source="good.png" Command="{Binding GoodCommand}" />
+                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" />
+            </StackLayout>
+            <Button Text="Avaliar!" Command="{Binding EvaluateCommand}" VerticalOptions="EndAndExpand" Margin="10" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

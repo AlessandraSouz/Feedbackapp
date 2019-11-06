@@ -6,12 +6,12 @@ namespace Feedbackapp.ViewModel
 {
     public class SignUpPageViewModel : BaseViewModel
     {
-        private string name;
-        public string Name { get { return name; } set { SetProperty(ref name, value); } }
-        private string email;
-        public string Email { get { return email; } set { SetProperty(ref email, value); } }
-        private string pass;
-        public string Pass { get { return pass; } set { SetProperty(ref pass, value); } }
+        private string _name;
+        public string Name { get { return _name; } set { SetProperty(ref _name, value); } }
+        private string _email;
+        public string Email { get { return _email; } set { SetProperty(ref _email, value); } }
+        private string _pass;
+        public string Pass { get { return _pass; } set { SetProperty(ref _pass, value); } }
 
         public Command SignUpCommand { get; private set; }
 

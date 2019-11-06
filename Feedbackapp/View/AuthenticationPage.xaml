@@ -24,11 +24,9 @@
                 <Entry Text="{Binding Password}" Placeholder="******" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
-            <!--<Button Command="{Binding ForgotPwdCommand}" Text="Recuperar senha" HorizontalOptions="Center" VerticalOptions="End"/>-->
-
             <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" HorizontalOptions="Center" VerticalOptions="End"/>
 
-            <Button Command="{Binding LoginCommand}" Text="Entrar" BackgroundColor="" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+            <Button Command="{Binding LoginCommand}" Text="Entrar" CornerRadius="5" TextColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
        
         </StackLayout>
     </ContentPage.Content>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.MainPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Button HeightRequest="72" TextColor="Black" Text="Sou professor" Command="{Binding ProfLogin}"/>
-            <Button HeightRequest="72" TextColor="Black" Text="Sou aluno" Command="{Binding AlunoEvaluation}"/>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
+            <Button HeightRequest="72" TextColor="Black" Text="Sou professor" Command="{Binding ProfLogin}" />
+            <Button HeightRequest="72" TextColor="Black" Text="Sou aluno" Command="{Binding AlunoEvaluation}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

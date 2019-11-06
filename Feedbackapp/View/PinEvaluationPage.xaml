@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.PinEvaluationPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="10">
+            <Image Source="icon.png" Aspect="AspectFit" HeightRequest="72"/>
+            <Label Text="PIN:" FontSize="12" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry Text="{Binding PIN}" Placeholder="Insira o PIN" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Keyboard="Numeric"/>
+            <Button Text="Avaliar!" BackgroundColor="LightGray" TextColor="Black" Command="{Binding EvaluateCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
