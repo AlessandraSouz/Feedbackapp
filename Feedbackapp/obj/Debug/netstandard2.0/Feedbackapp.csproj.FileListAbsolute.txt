@@ -15,3 +15,7 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.csprojAssemblyReference.cache
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ClassEvaluationPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationHistoryPage.xaml.g.cs
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MenuPage.xaml.g.cs

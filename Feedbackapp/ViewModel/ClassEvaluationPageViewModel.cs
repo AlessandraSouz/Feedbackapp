@@ -77,7 +77,7 @@ namespace Feedbackapp.ViewModel
         {
             await WebClientFunctions.PostEvaluation(Evaluation);
             DisplayAlert("Sucesso!", "Sua avaliação foi entregue com sucesso!", "Ok");
-            await Navigation.PopAsync();
+            await NavigationFunctions.PopAsync();
         }
     }
 }

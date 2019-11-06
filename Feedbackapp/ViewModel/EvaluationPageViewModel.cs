@@ -20,7 +20,8 @@ namespace Feedbackapp.ViewModel
         private string _pergunta;
         public string Pergunta { get { return _pergunta; } set { SetProperty(ref _pergunta, value); } }
 
-        private ObservableCollection<Question> LsPerguntas { get; set; }
+        private ObservableCollection<Question> _lsPerguntas;
+        public ObservableCollection<Question> LsPerguntas { get { return _lsPerguntas; } set { SetProperty(ref _lsPerguntas, value); } }
 
         public Command AddQuestion { get; private set; }
         public Command ShareQuestion { get; private set; }
@@ -29,6 +30,7 @@ namespace Feedbackapp.ViewModel
         {
             AddQuestion = new Command(AddQuestionTapped);
             ShareQuestion = new Command(ShareQuestionTapped);
+            LsPerguntas = new ObservableCollection<Question>();
         }
 
         private void AddQuestionTapped()
@@ -51,7 +53,7 @@ namespace Feedbackapp.ViewModel
             };
 
             await WebClientFunctions.PostEvaluation(evaluation);
-            await Navigation.PushAsync(new ShareQuestionPage(evaluation.PIN));
+            await NavigationFunctions.PushAsync(new ShareQuestionPage(evaluation.PIN));
         }
 
         private string GerarPIN()

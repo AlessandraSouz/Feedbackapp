@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Feedbackapp.Functions
     public class WebClientFunctions
     {
         private static HttpClient Client { get; set; }
-        private static Uri BaseAddress = new Uri("http://*:5000/api/evaluation");
+        private static Uri BaseAddress = new Uri("http://192.168.0.16:5000/api/evaluation");
 
         static WebClientFunctions()
         {
@@ -36,6 +37,20 @@ namespace Feedbackapp.Functions
             var jsonContent = JsonConvert.SerializeObject(evaluation);
             var content = new StringContent(jsonContent);
             await Client.PostAsync("", content);
+        }
+
+        public static async Task<List<Evaluation>> GetEvaluations()
+        {
+            var result = new List<Evaluation>();
+            var response = await Client.GetAsync("");
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var responseObject = JsonConvert.DeserializeObject<List<Evaluation>>(responseContent);
+                result = responseObject;
+            }
+
+            return result;
         }
     }
 }

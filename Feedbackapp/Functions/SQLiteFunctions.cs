@@ -13,6 +13,11 @@ namespace Feedbackapp.Functions
         private static readonly string connectionString = Path.Combine(Environment.GetFolderPath(SpecialFolder.LocalApplicationData), @"SqLiteDatabase.db3");
         private static SQLiteAsyncConnection SQLiteConnection { get; set; }
 
+        static SQLiteFunctions()
+        {
+            CreateTables();
+        }
+
         public static void CreateTables()
         {
             if (!File.Exists(connectionString))

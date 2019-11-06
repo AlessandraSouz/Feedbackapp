@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.EvaluationHistoryPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <CollectionView ItemsSource="{Binding Evaluations}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="0,0,0,10">
+                            <Label Text="{Binding Perguntas[0].Pergunta}" />
+                            <Label Text="{Binding Percentual, StringFormat='Percentual de aprovação da avaliação: {0}%'}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

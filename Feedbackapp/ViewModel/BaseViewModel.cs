@@ -25,8 +25,6 @@ namespace Feedbackapp.ViewModel
             Application.Current.MainPage.DisplayAlert(title, message, cancel);
         }
 
-        protected readonly INavigation Navigation = Application.Current.MainPage.Navigation;
-
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

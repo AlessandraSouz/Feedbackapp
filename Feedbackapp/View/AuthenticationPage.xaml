@@ -21,7 +21,7 @@
                 <Label Text="Email:" Grid.Column="0" Grid.Row="0"/>
                 <Label Text="Senha: " Grid.Column="0" Grid.Row="1"/>
                 <Entry Text="{Binding Email}" Placeholder="exemplo@exemplo.com" Grid.Column="1" Grid.Row="0"/>
-                <Entry Text="{Binding Password}" Placeholder="******" Grid.Column="1" Grid.Row="1"/>
+                <Entry Text="{Binding Password}" Placeholder="******" Grid.Column="1" Grid.Row="1" IsPassword="True"/>
             </Grid>
 
             <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" HorizontalOptions="Center" VerticalOptions="End"/>

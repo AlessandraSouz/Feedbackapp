@@ -32,14 +32,14 @@ namespace Feedbackapp.ViewModel
 
             var user = await SQLiteFunctions.SelectUser(usr);
             if (user != null)
-                await Navigation.PushAsync(new AuthenticationPage());
+                await NavigationFunctions.PushAsync(new MenuPage());
             else
                 DisplayAlert("Erro", "Usuário não cadastrado", "Ok!");
         }
 
         private async void SignUpTapped()
         {
-            await Navigation.PushAsync(new SignUpPage());
+            await NavigationFunctions.PushAsync(new SignUpPage());
         }
     }
 }

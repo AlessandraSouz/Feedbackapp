@@ -19,7 +19,7 @@ namespace Feedbackapp.ViewModel
         public async void EvaluateCommandTapped()
         {
             var evaluation = await WebClientFunctions.GetEvaluation(PIN);
-            await Navigation.PushAsync(new ClassEvaluationPage(evaluation));
+            await NavigationFunctions.PushAsync(new ClassEvaluationPage(evaluation));
         }
     }
 }

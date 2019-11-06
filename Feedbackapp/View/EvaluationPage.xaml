@@ -34,6 +34,15 @@
                 <Entry Text="{Binding Pergunta}" HeightRequest="200" />
 
                 <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Green" FontSize="32" Margin="15" Command="{Binding AddQuestion}" />
+
+                <CollectionView ItemsSource="{Binding LsPerguntas}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Pergunta}" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
                 <Button Text="Compartilhar" VerticalOptions="End" Command="{Binding ShareQuestion}" />
             </StackLayout>
         </ScrollView>

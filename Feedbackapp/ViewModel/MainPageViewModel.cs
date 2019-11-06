@@ -1,4 +1,5 @@
 ﻿using System;
+using Feedbackapp.Functions;
 using Feedbackapp.View;
 using Xamarin.Forms;
 
@@ -17,12 +18,12 @@ namespace Feedbackapp.ViewModel
 
         private async void AlunoEvaluationTapped()
         {
-            await Navigation.PushAsync(new PinEvaluationPage());
+            await NavigationFunctions.PushAsync(new PinEvaluationPage());
         }
 
         private async void ProfLoginTapped()
         {
-            await Navigation.PushAsync(new AuthenticationPage());
+            await NavigationFunctions.PushAsync(new AuthenticationPage());
         }
     }
 }

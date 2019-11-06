@@ -20,10 +20,10 @@ namespace Feedbackapp.ViewModel
             SignUpCommand = new Command(SignUpTapped);
         }
 
-        private void SignUpTapped()
+        private async void SignUpTapped()
         {
             if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Pass))
-                Application.Current.MainPage.DisplayAlert("Erro!", "Você precisa informar todos os seus dados", "Ok!");
+                await Application.Current.MainPage.DisplayAlert("Erro!", "Você precisa informar todos os seus dados", "Ok!");
             else
             {
                 User usr = new User
@@ -34,6 +34,10 @@ namespace Feedbackapp.ViewModel
                 };
 
                 SQLiteFunctions.InsertUser(usr);
+
+                DisplayAlert("Sucesso!", "Seu cadastro foi realizado com sucesso", "Ok");
+
+                await NavigationFunctions.PopAsync();
             }
         }
     }
