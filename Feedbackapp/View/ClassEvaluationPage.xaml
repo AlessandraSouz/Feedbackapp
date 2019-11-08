@@ -4,13 +4,21 @@
         <StackLayout Padding="10">
             <Label Text="Nome:" TextColor="Black" FontSize="12" />
             <Entry Text="{Binding Name}" Placeholder="(informação opcional)" />
-            <Label Margin="0,20,0,0" Text="{Binding Pergunta}" />
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10">
-                <ImageButton Source="bad.png" Command="{Binding BadCommand}" Aspect="AspectFit" HeightRequest="42" />
-                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" Aspect="AspectFit" HeightRequest="42" />
-                <ImageButton Source="good.png" Command="{Binding GoodCommand}" Aspect="AspectFit" HeightRequest="42" />
-                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" Aspect="AspectFit" HeightRequest="42" />
-            </StackLayout>
+            <CollectionView ItemsSource="{Binding Evaluation.Perguntas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Margin="0,20,0,0" Text="{Binding Pergunta}" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
+                                <ImageButton Source="bad.png" Command="{Binding BadCommand}" Aspect="AspectFit" HeightRequest="42" />
+                                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" Aspect="AspectFit" HeightRequest="42" />
+                                <ImageButton Source="good.png" Command="{Binding GoodCommand}" Aspect="AspectFit" HeightRequest="42" />
+                                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" Aspect="AspectFit" HeightRequest="42" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <Button Text="Avaliar!" Command="{Binding EvaluateCommand}" VerticalOptions="EndAndExpand" Margin="10" />
         </StackLayout>
     </ContentPage.Content>

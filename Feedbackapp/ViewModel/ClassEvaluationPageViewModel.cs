@@ -10,64 +10,59 @@ namespace Feedbackapp.ViewModel
         private Evaluation _evaluation;
         public Evaluation Evaluation { get { return _evaluation; } set { SetProperty(ref _evaluation, value); } }
 
-        private string _pergunta;
-        public string Pergunta { get { return _pergunta; } set { SetProperty(ref _pergunta, value); } }
-
-        private int _index;
-        public int Index { get { return _index; } set { SetProperty(ref _index, value); } }
-
-        public Command BadCommand { get; private set; }
-        public Command RegularCommand { get; private set; }
-        public Command GoodCommand { get; private set; }
-        public Command ExcellentCommand { get; private set; }
+        public Command<Question> BadCommand { get; private set; }
+        public Command<Question> RegularCommand { get; private set; }
+        public Command<Question> GoodCommand { get; private set; }
+        public Command<Question> ExcellentCommand { get; private set; }
 
         public Command EvaluateCommand { get; private set; }
 
         public ClassEvaluationPageViewModel(Evaluation evaluation)
         {
             Evaluation = evaluation;
-            Index = 0;
-            Pergunta = Evaluation.Perguntas.ToList()[Index].Pergunta;
 
-            BadCommand = new Command(BadCommandTapped);
-            RegularCommand = new Command(RegularCommandTapped);
-            GoodCommand = new Command(GoodCommandTapped);
-            ExcellentCommand = new Command(ExcellentCommandTapped);
+            BadCommand = new Command<Question>(BadCommandTapped);
+            RegularCommand = new Command<Question>(RegularCommandTapped);
+            GoodCommand = new Command<Question>(GoodCommandTapped);
+            ExcellentCommand = new Command<Question>(ExcellentCommandTapped);
 
             EvaluateCommand = new Command(EvaluateCommandTapped);
         }
 
-        public async void BadCommandTapped()
+        public async void BadCommandTapped(Question pergunta)
         {
-            //Evaluation.Perguntas.ToList()[Index].Feedback = "Ruim";
-            //IndexPlus();
+            //Remove da avaliação a pergunta sendo avaliada
+            Evaluation.Perguntas.Remove(pergunta);
+            //Adiciona a estrutura com o feedback novamente na avaliação
+            pergunta.Feedback = "Ruim";
+            Evaluation.Perguntas.Add(pergunta);
         }
 
-        public async void RegularCommandTapped()
+        public async void RegularCommandTapped(Question pergunta)
         {
-            //Evaluation.Perguntas.ToList()[Index].Feedback = "Regular";
-            //IndexPlus();
+            //Remove da avaliação a pergunta sendo avaliada
+            Evaluation.Perguntas.Remove(pergunta);
+            //Adiciona a estrutura com o feedback novamente na avaliação
+            pergunta.Feedback = "Regular";
+            Evaluation.Perguntas.Add(pergunta);
         }
 
-        public async void GoodCommandTapped()
+        public async void GoodCommandTapped(Question pergunta)
         {
-            //Evaluation.Perguntas.ToList()[Index].Feedback = "Bom";
-            //IndexPlus();
+            //Remove da avaliação a pergunta sendo avaliada
+            Evaluation.Perguntas.Remove(pergunta);
+            //Adiciona a estrutura com o feedback novamente na avaliação
+            pergunta.Feedback = "Bom";
+            Evaluation.Perguntas.Add(pergunta);
         }
 
-        public async void ExcellentCommandTapped()
+        public async void ExcellentCommandTapped(Question pergunta)
         {
-            //Evaluation.Perguntas.ToList()[Index].Feedback = "Excelente";
-            //IndexPlus();
-        }
-
-        public void IndexPlus()
-        {
-            if (Index < Evaluation.Perguntas.Count())
-            {
-                Index++;
-                Pergunta = Evaluation.Perguntas.ToList()[Index].Pergunta;
-            }
+            //Remove da avaliação a pergunta sendo avaliada
+            Evaluation.Perguntas.Remove(pergunta);
+            //Adiciona a estrutura com o feedback novamente na avaliação
+            pergunta.Feedback = "Excelente";
+            Evaluation.Perguntas.Add(pergunta);
         }
 
         public async void EvaluateCommandTapped()

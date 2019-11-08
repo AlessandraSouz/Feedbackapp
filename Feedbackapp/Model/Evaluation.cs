@@ -9,7 +9,7 @@ namespace Feedbackapp.Model
         private string turma;
         private string ies;
         private string curso;
-        private IEnumerable<Question> pergunta;
+        private List<Question> pergunta;
         private decimal percentual;
 
         public int Id { get => id; set => id = value; }
@@ -17,10 +17,10 @@ namespace Feedbackapp.Model
         public string Turma { get => turma; set => turma = value; }
         public string Ies { get => ies; set => ies = value; }
         public string Curso { get => curso; set => curso = value; }
-        public IEnumerable<Question> Perguntas { get => pergunta; set => pergunta = value; }
+        public List<Question> Perguntas { get => pergunta; set => pergunta = value; }
         public decimal Percentual { get => percentual; set => percentual = value; }
 
-        public Evaluation(int id, string pin, string turma, string ies, string curso, IEnumerable<Question> pergunta, decimal percentual)
+        public Evaluation(int id, string pin, string turma, string ies, string curso, List<Question> pergunta, decimal percentual)
         {
             Id = id;
             PIN = pin;
