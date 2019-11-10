@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Feedbackapp.Functions;
-using Feedbackapp.Model;
+﻿using Feedbackapp.Functions;
 using Feedbackapp.View;
 using Xamarin.Forms;
 
@@ -8,8 +6,8 @@ namespace Feedbackapp.ViewModel
 {
     public class PinEvaluationPageViewModel : BaseViewModel
     {
-        private int _pin;
-        public int PIN { get { return _pin; } set { SetProperty(ref _pin, value); } }
+        private string _pin;
+        public string PIN { get { return _pin; } set { SetProperty(ref _pin, value); } }
 
         public Command EvaluateCommand { get; private set; }
 
@@ -20,13 +18,15 @@ namespace Feedbackapp.ViewModel
 
         public async void EvaluateCommandTapped()
         {
-            //TODO: publicar WebAPI para utilizar funções de comunicação Http
-            //var evaluation = await WebClientFunctions.GetEvaluation(PIN);
-            var evaluation = new Evaluation
+            try
             {
-                Perguntas = new List<Question> { new Question { Pergunta = "Como foi a aula de hoje?" } },
-            };
-            await NavigationFunctions.PushAsync(new ClassEvaluationPage(evaluation));
+                var evaluation = await WebClientFunctions.GetEvaluation(PIN);
+                await NavigationFunctions.PushAsync(new ClassEvaluationPage(evaluation));
+            }
+            catch (System.Exception ex)
+            {
+                DisplayAlert("Erro", "Não foi possível conectar com o servidor", "Ok");
+            }
         }
     }
 }

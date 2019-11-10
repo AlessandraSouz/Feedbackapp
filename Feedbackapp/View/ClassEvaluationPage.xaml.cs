@@ -1,6 +1,5 @@
 ﻿using Feedbackapp.Model;
 using Feedbackapp.ViewModel;
-
 using Xamarin.Forms;
 
 namespace Feedbackapp.View

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Feedbackapp.Functions;
 using Feedbackapp.Model;
 using Feedbackapp.View;
@@ -47,14 +48,20 @@ namespace Feedbackapp.ViewModel
             {
                 Curso = Curso,
                 Ies = IES,
-                Perguntas = LsPerguntas,
+                Perguntas = LsPerguntas.ToList(),
                 PIN = GerarPIN(),
                 Turma = Turma
             };
 
-            //TODO: publicar WebAPI para utilizar funções de comunicação Http
-            //await WebClientFunctions.PostEvaluation(evaluation);
-            await NavigationFunctions.PushAsync(new ShareQuestionPage(evaluation.PIN));
+            try
+            {
+                await WebClientFunctions.PostEvaluation(evaluation);
+                await NavigationFunctions.PushAsync(new ShareQuestionPage(evaluation.PIN));
+            }
+            catch (System.Exception ex)
+            {
+                DisplayAlert("Erro", "Não foi possível conectar com o servidor", "Ok");
+            }
         }
 
         private string GerarPIN()

@@ -24,10 +24,10 @@
                 <Entry Text="{Binding Password}" Placeholder="******" Grid.Column="1" Grid.Row="1" IsPassword="True"/>
             </Grid>
 
-            <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button Command="{Binding LoginCommand}" Text="Entrar" CornerRadius="5" TextColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="End"/>
 
-            <Button Command="{Binding LoginCommand}" Text="Entrar" CornerRadius="5" TextColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
-       
+            <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" TextColor="Gray" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

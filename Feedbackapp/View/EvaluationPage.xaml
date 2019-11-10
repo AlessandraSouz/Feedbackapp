@@ -31,11 +31,11 @@
                 </Grid>
 
                 <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" />
-                <Entry Text="{Binding Pergunta}" HeightRequest="200" />
+                <Entry Text="{Binding Pergunta}" HeightRequest="100" />
 
                 <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Green" FontSize="32" Margin="15" Command="{Binding AddQuestion}" />
 
-                <CollectionView ItemsSource="{Binding LsPerguntas}">
+                <CollectionView ItemsSource="{Binding LsPerguntas}" HeightRequest="72">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Label Text="{Binding Pergunta}" />

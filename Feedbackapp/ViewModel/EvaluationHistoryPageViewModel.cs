@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Feedbackapp.Functions;
 using Feedbackapp.Model;
 
 namespace Feedbackapp.ViewModel
@@ -10,14 +11,19 @@ namespace Feedbackapp.ViewModel
 
         public EvaluationHistoryPageViewModel()
         {
-            Evaluations = new List<Evaluation>
+            GetEvaluations();
+        }
+
+        public async void GetEvaluations()
+        {
+            try
             {
-                new Evaluation
-                {
-                    Perguntas = new List<Question>{ new Question { Pergunta = "Como foi a aula de hoje?" } },
-                    Percentual = 70
-                },
-            };
+                Evaluations = await WebClientFunctions.GetEvaluations();
+            }
+            catch (System.Exception ex)
+            {
+                DisplayAlert("Erro", "Não foi possível conectar com o servidor", "Ok");
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Feedbackapp.ViewModel
                 Password = Password
             };
 
-            var user = await SQLiteFunctions.SelectUser(usr);
+            var user = SQLiteFunctions.SelectUser(usr);
             if (user != null)
                 await NavigationFunctions.PushAsync(new MenuPage());
             else

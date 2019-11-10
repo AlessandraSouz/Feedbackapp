@@ -6,8 +6,18 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Margin="0,0,0,10">
-                            <Label Text="{Binding Perguntas[0].Pergunta}" />
-                            <Label Text="{Binding Percentual, StringFormat='Percentual de aprovação da avaliação: {0}%'}" />
+                            <CollectionView ItemsSource="{Binding Perguntas}" HeightRequest="72">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Label Text="{Binding Pergunta, StringFormat='Pergunta: {0}'}" TextColor="Black" FontSize="16"/>
+                                            <Label Text="{Binding Feedback}" TextColor="Black" FontSize="16"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                            <Label Text="{Binding Percentual, StringFormat='Percentual da avaliação: {0}%'}" />
+                            <BoxView Margin="0,20" HeightRequest="1" Color="Black" BackgroundColor="Black"/>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

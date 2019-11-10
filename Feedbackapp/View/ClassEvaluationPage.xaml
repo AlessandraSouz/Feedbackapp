@@ -4,16 +4,20 @@
         <StackLayout Padding="10">
             <Label Text="Nome:" TextColor="Black" FontSize="12" />
             <Entry Text="{Binding Name}" Placeholder="(informação opcional)" />
-            <CollectionView ItemsSource="{Binding Evaluation.Perguntas}">
+            <CollectionView ItemsSource="{Binding Evaluation.Perguntas}" x:Name="mainStack">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Label Margin="0,20,0,0" Text="{Binding Pergunta}" />
+                            <Label Margin="0,20,0,0" Text="{Binding Pergunta}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10">
-                                <ImageButton Source="bad.png" Command="{Binding BadCommand}" Aspect="AspectFit" HeightRequest="42" />
-                                <ImageButton Source="regular.png" Command="{Binding RegularCommand}" Aspect="AspectFit" HeightRequest="42" />
-                                <ImageButton Source="good.png" Command="{Binding GoodCommand}" Aspect="AspectFit" HeightRequest="42" />
-                                <ImageButton Source="excellent.png" Command="{Binding ExcellentCommand}" Aspect="AspectFit" HeightRequest="42" />
+                                <ImageButton Source="bad.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.BadCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.BadColored, Mode=TwoWay}"/>
+                                <ImageButton Source="badGrey.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.BadCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.BadGrey, Mode=TwoWay}"/>
+                                <ImageButton Source="regular.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.RegularCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.RegularColored, Mode=TwoWay}"/>
+                                <ImageButton Source="regularGrey.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.RegularCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.RegularGrey, Mode=TwoWay}"/>
+                                <ImageButton Source="good.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.GoodCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.GoodColored, Mode=TwoWay}"/>
+                                <ImageButton Source="goodGrey.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.GoodCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.GoodGrey, Mode=TwoWay}"/>
+                                <ImageButton Source="excellent.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.ExcellentCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.ExcellentColored, Mode=TwoWay}"/>
+                                <ImageButton Source="excellentGrey.png" Command="{Binding Source={x:Reference mainStack}, Path=BindingContext.ExcellentCommand}" CommandParameter="{Binding .}" Aspect="AspectFit" HeightRequest="42" IsVisible="{Binding Source={x:Reference mainStack}, Path=BindingContext.ExcellentGrey, Mode=TwoWay}"/>
                             </StackLayout>
                         </StackLayout>
                     </DataTemplate>
