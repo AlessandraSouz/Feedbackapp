@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.MenuPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Professor" TextColor="Black" FontSize="Large" HorizontalOptions="Start" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
-            <Button HeightRequest="72" TextColor="Black" Text="Histórico de avaliações" Command="{Binding SeeHistoryCommand}" />
-            <Button HeightRequest="72" TextColor="Black" Text="Criar avaliação" Command="{Binding PublishEvaluationCommand}" />
+            <Button HeightRequest="72" TextColor="Black" Text="Histórico de avaliações" Command="{Binding SeeHistoryCommand}" BackgroundColor="{StaticResource Key=OpenClassGreen}"/>
+            <Button HeightRequest="72" TextColor="Black" Text="Criar avaliação" Command="{Binding PublishEvaluationCommand}" BackgroundColor="{StaticResource Key=OpenClassGreen}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,14 +1,27 @@
 ﻿<Properties StartupConfiguration="{83552A21-9E1F-4EC1-9F97-59AEDB1F9B57}|Default">
   <MonoDevelop.Ide.ItemProperties.Feedbackapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8478EA84-1B73-4A9F-B962-D1B06058908C" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/Functions/WebClientFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/View/PinEvaluationPage.xaml">
     <Files>
-      <File FileName="Feedbackapp/Functions/WebClientFunctions.cs" Line="13" Column="6" />
+      <File FileName="Feedbackapp/View/AuthenticationPage.xaml" Line="10" Column="13" />
+      <File FileName="Feedbackapp/View/ClassEvaluationPage.xaml" Line="7" Column="32" />
+      <File FileName="Feedbackapp/View/EvaluationHistoryPage.xaml" Line="7" Column="32" />
+      <File FileName="Feedbackapp/View/MainPage.xaml" Line="10" Column="1" />
+      <File FileName="Feedbackapp/View/EvaluationPage.xaml" Line="45" Column="1" />
+      <File FileName="Feedbackapp/View/MenuPage.xaml" Line="9" Column="1" />
+      <File FileName="Feedbackapp/View/PinEvaluationPage.xaml" Line="13" Column="1" />
+      <File FileName="Feedbackapp/View/ShareQuestionPage.xaml" Line="7" Column="32" />
+      <File FileName="Feedbackapp/View/SignUpPage.xaml" Line="3" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Feedbackapp" expanded="True">
-            <Node name="Feedbackapp" expanded="True" selected="True" />
+            <Node name="Feedbackapp" expanded="True">
+              <Node name="View" expanded="True">
+                <Node name="PinEvaluationPage.xaml" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Feedbackapp.Android" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.EvaluationPage">
     <NavigationPage.TitleView>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Label Text="Avaliação" HorizontalOptions="Center" VerticalOptions="Center" />
+        <StackLayout>
+            <Label Text="Criar avaliação" TextColor="Black" FontSize="Large" HorizontalOptions="Start" VerticalOptions="Center"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -20,30 +20,30 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label Text="Turma: " Grid.Column="0" Grid.Row="0" />
+                    <Label Text="Turma: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding Turma}" Grid.Column="1" Grid.Row="0" />
-                    <Label Text="IES: " Grid.Column="0" Grid.Row="1" />
+                    <Label Text="Instituição: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding IES}" Grid.Column="1" Grid.Row="1" />
-                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" />
+                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding Turno}" Grid.Column="1" Grid.Row="2" />
-                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" />
+                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="3" />
                 </Grid>
 
-                <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" />
+                <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
                 <Entry Text="{Binding Pergunta}" HeightRequest="100" />
 
-                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Green" FontSize="32" Margin="15" Command="{Binding AddQuestion}" />
+                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="32" Margin="15" Command="{Binding AddQuestion}" BackgroundColor="{StaticResource Key=OpenClassGreen}"/>
 
                 <CollectionView ItemsSource="{Binding LsPerguntas}" HeightRequest="72">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="{Binding Pergunta}" />
+                            <Label Text="{Binding Pergunta}" TextColor="Black" FontSize="14"/>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
-                <Button Text="Compartilhar" VerticalOptions="End" Command="{Binding ShareQuestion}" />
+                <Button Text="Compartilhar" VerticalOptions="End" TextColor="Black" BackgroundColor="{StaticResource Key=OpenClassGreen}" Command="{Binding ShareQuestion}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

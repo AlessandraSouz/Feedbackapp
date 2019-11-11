@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Feedbackapp.Functions;
 using Feedbackapp.Model;
+using Feedbackapp.View;
 
 namespace Feedbackapp.ViewModel
 {
@@ -19,6 +20,11 @@ namespace Feedbackapp.ViewModel
             try
             {
                 Evaluations = await WebClientFunctions.GetEvaluations();
+                if (Evaluations == null || Evaluations.Count == 0)
+                {
+                    if (await DisplayAlert("Erro", "Sem avaliações no momento", "Criar avaliação", "Ok"))
+                        await NavigationFunctions.PushAsync(new EvaluationPage());
+                }
             }
             catch (System.Exception ex)
             {

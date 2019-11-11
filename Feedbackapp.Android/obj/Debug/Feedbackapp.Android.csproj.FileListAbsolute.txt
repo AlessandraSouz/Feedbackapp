@@ -536,3 +536,4 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.Android/obj/Debug/res/drawable/icon.png

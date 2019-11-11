@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.PinEvaluationPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Aluno" TextColor="Black" FontSize="Large" HorizontalOptions="Start" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Padding="10">
-            <Image Source="icon.png" Aspect="AspectFit" HeightRequest="72"/>
-            <Label Text="PIN:" FontSize="12" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Entry Text="{Binding PIN}" Placeholder="Insira o PIN" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Keyboard="Numeric"/>
-            <Button Text="Avaliar!" BackgroundColor="LightGray" TextColor="Black" Command="{Binding EvaluateCommand}"/>
+        <StackLayout Padding="10">
+            <Image HorizontalOptions="Center" VerticalOptions="Start" Source="icon.png" HeightRequest="150" Aspect="AspectFit"/>
+            <Label Text="PIN:" FontSize="16" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry Text="{Binding PIN}" Placeholder="Insira o PIN" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black"/>
+            <Button Text="Avaliar!" BackgroundColor="{StaticResource Key=OpenClassGreen}" VerticalOptions="Center" TextColor="Black" Command="{Binding EvaluateCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
