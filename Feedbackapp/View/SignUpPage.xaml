@@ -7,25 +7,27 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Image HorizontalOptions="Center" VerticalOptions="Start" Source=""/> <!--DataBinding para VM-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="7*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Text="Nome: " Grid.Column="0" Grid.Row="0"/>
-                <Entry Text="{Binding Name}" Placeholder="Nome Completo" Grid.Column="1" Grid.Row="0"/>
-                <Label Text="E-mail: " Grid.Column="0" Grid.Row="1"/>
-                <Entry Text="{Binding Email}" Placeholder="E-mail" Grid.Column="1" Grid.Row="1"/>
-                <Label Text="Senha: " Grid.Column="0" Grid.Row="2"/>
-                <Entry Text="{Binding Pass}" Placeholder="*******" Grid.Column="1" Grid.Row="2" IsPassword="True"/>
-            </Grid>
-            <Button Command="{Binding SignUpCommand}" Text="Cadastrar" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Image HorizontalOptions="Center" VerticalOptions="Start" Source="icon.png" HeightRequest="150" Aspect="AspectFit"/>
+            <StackLayout VerticalOptions="Center" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Nome: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="{StaticResource Key=OpenClassGreen}"/>
+                    <Entry Text="{Binding Name}" Placeholder="Nome Completo" Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="E-mail: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="{StaticResource Key=OpenClassGreen}"/>
+                    <Entry Text="{Binding Email}" Placeholder="E-mail" Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="Senha: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="{StaticResource Key=OpenClassGreen}"/>
+                    <Entry Text="{Binding Pass}" Placeholder="*******" Grid.Column="1" Grid.Row="2" IsPassword="True"/>
+                </Grid>
+                <Button Command="{Binding SignUpCommand}" Text="Cadastrar" HorizontalOptions="Center" VerticalOptions="End" BackgroundColor="{StaticResource Key=OpenClassGreen}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

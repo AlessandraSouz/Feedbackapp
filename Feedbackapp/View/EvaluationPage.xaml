@@ -31,9 +31,9 @@
                 </Grid>
 
                 <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
-                <Entry Text="{Binding Pergunta}" HeightRequest="100" />
+                <Entry Text="{Binding Pergunta}" HeightRequest="72" />
 
-                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="32" Margin="15" Command="{Binding AddQuestion}" BackgroundColor="{StaticResource Key=OpenClassGreen}"/>
+                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Black" Margin="5" FontSize="18" Command="{Binding AddQuestion}" BackgroundColor="{StaticResource Key=OpenClassGreen}" HeightRequest="36" WidthRequest="36"/>
 
                 <CollectionView ItemsSource="{Binding LsPerguntas}" HeightRequest="72">
                     <CollectionView.ItemTemplate>

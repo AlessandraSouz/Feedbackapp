@@ -18,3 +18,4 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Release/netstandard2.0/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Release/netstandard2.0/ref/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Release/netstandard2.0/Feedbackapp.pdb
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Release/netstandard2.0/Feedbackapp.csprojAssemblyReference.cache

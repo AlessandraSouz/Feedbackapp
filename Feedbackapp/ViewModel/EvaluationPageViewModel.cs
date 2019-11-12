@@ -48,7 +48,7 @@ namespace Feedbackapp.ViewModel
             {
                 Curso = Curso,
                 Ies = IES,
-                Perguntas = LsPerguntas.ToList(),
+                Perguntas = new ObservableCollection<Question>(LsPerguntas),
                 PIN = GerarPIN(),
                 Turma = Turma
             };

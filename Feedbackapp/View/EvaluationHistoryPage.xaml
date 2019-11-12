@@ -11,12 +11,13 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Margin="0,0,0,10">
-                            <CollectionView ItemsSource="{Binding Perguntas}" HeightRequest="72">
+                            <Label Text="{Binding Name, StringFormat='Nome do aluno: {0}'}" />
+                            <CollectionView ItemsSource="{Binding Perguntas}" HeightRequest="144">
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>
                                         <StackLayout>
                                             <Label Text="{Binding Pergunta, StringFormat='Pergunta: {0}'}" TextColor="Black" FontSize="16"/>
-                                            <Label Text="{Binding Feedback}" TextColor="Black" FontSize="16"/>
+                                            <Label Text="{Binding Feedback}" TextColor="Black" FontSize="14"/>
                                         </StackLayout>
                                     </DataTemplate>
                                 </CollectionView.ItemTemplate>
