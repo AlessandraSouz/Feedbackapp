@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Feedbackapp.View.EvaluationDetailPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Avaliação" TextColor="Black" FontSize="Large" HorizontalOptions="Start" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Turma: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="{Binding Evaluation.Turma}" Grid.Column="1" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="Instituição: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="{Binding Evaluation.Ies}" Grid.Column="1" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="{Binding Evaluation.Turno}" Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="{Binding Evaluation.Curso}" Grid.Column="1" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
+                </Grid>
+
+                <Label Text="Perguntas:" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
+                <CollectionView ItemsSource="{Binding Evaluation.Perguntas}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Pergunta}" TextColor="Black" FontSize="14"/>
+                                <Label Text="{Binding Feedback}" TextColor="Black" FontSize="14"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label Text="{Binding Evaluation.Percentual, StringFormat='Percentual da avaliação: {0}%'}" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

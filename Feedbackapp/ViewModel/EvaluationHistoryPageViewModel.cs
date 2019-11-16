@@ -2,6 +2,7 @@
 using Feedbackapp.Functions;
 using Feedbackapp.Model;
 using Feedbackapp.View;
+using Xamarin.Forms;
 
 namespace Feedbackapp.ViewModel
 {
@@ -10,9 +11,12 @@ namespace Feedbackapp.ViewModel
         private List<Evaluation> _evaluations;
         public List<Evaluation> Evaluations { get { return _evaluations; } set { SetProperty(ref _evaluations, value); } }
 
+        public Command EvaluationDetailsCommand { get; private set; }
+
         public EvaluationHistoryPageViewModel()
         {
             GetEvaluations();
+            EvaluationDetailsCommand = new Command<Evaluation>(EvaluationDetailsTapped);
         }
 
         public async void GetEvaluations()
@@ -30,6 +34,11 @@ namespace Feedbackapp.ViewModel
             {
                 DisplayAlert("Erro", "Não foi possível conectar com o servidor", "Ok");
             }
+        }
+
+        public async void EvaluationDetailsTapped(Evaluation evaluation)
+        {
+            await NavigationFunctions.PushAsync(new EvaluationDetailPage(evaluation));
         }
     }
 }
