@@ -1,5 +1,6 @@
 ﻿<Properties StartupConfiguration="{83552A21-9E1F-4EC1-9F97-59AEDB1F9B57}|Default">
   <MonoDevelop.Ide.ItemProperties.Feedbackapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8478EA84-1B73-4A9F-B962-D1B06058908C" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/View/EvaluationHistoryPage.xaml">
     <Files>
       <File FileName="Feedbackapp/View/AuthenticationPage.xaml" Line="10" Column="13" />
@@ -10,26 +11,47 @@
       <File FileName="Feedbackapp/View/PinEvaluationPage.xaml" />
       <File FileName="Feedbackapp/View/ShareQuestionPage.xaml" />
       <File FileName="Feedbackapp/View/SignUpPage.xaml" Line="21" Column="43" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/ViewModel/EvaluationHistoryPageViewModel.cs">
+    <Files>
+      <File FileName="Feedbackapp/ViewModel/EvaluationPageViewModel.cs" Line="67" Column="1" />
+      <File FileName="Feedbackapp/Functions/WebClientFunctions.cs" Line="58" Column="59" />
+      <File FileName="Feedbackapp/ViewModel/EvaluationHistoryPageViewModel.cs" Line="22" Column="96" />
+>>>>>>> b80ec5a514ddc59ababa5e1ca4cae8db95346fd1
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Feedbackapp" expanded="True">
             <Node name="Feedbackapp" expanded="True">
+<<<<<<< HEAD
               <Node name="View" expanded="True">
                 <Node name="EvaluationHistoryPage.xaml" selected="True" />
+=======
+              <Node name="Functions" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="EvaluationHistoryPageViewModel.cs" selected="True" />
+>>>>>>> b80ec5a514ddc59ababa5e1ca4cae8db95346fd1
               </Node>
-              <Node name="ViewModel" expanded="True" />
             </Node>
             <Node name="Feedbackapp.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.SelectDevice" />
+=======
+  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.RQ8M409R4GM" />
+>>>>>>> b80ec5a514ddc59ababa5e1ca4cae8db95346fd1
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/ViewModel/EvaluationHistoryPageViewModel.cs" relfile="Feedbackapp/ViewModel/EvaluationHistoryPageViewModel.cs" line="40" column="10" />

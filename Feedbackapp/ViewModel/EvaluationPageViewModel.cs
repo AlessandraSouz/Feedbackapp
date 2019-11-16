@@ -50,7 +50,8 @@ namespace Feedbackapp.ViewModel
                 Ies = IES,
                 Perguntas = new ObservableCollection<Question>(LsPerguntas),
                 PIN = GerarPIN(),
-                Turma = Turma
+                Turma = Turma,
+                Prof_Email = GlobalSettings.LoggedUser.Email
             };
 
             try

@@ -726,19 +726,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/alessandrasouza/.nuget/packages/": {}
+    "/Users/victorhr/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj",
+      "projectUniqueName": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj",
       "projectName": "Feedbackapp",
-      "projectPath": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj",
-      "packagesPath": "/Users/alessandrasouza/.nuget/packages/",
-      "outputPath": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/",
+      "projectPath": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj",
+      "packagesPath": "/Users/victorhr/.nuget/packages/",
+      "outputPath": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/alessandrasouza/.config/NuGet/NuGet.Config"
+        "/Users/victorhr/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

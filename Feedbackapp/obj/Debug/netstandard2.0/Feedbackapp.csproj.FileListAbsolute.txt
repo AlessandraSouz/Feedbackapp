@@ -19,4 +19,28 @@
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.csprojAssemblyReference.cache
+<<<<<<< HEAD
 /Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationDetailPage.xaml.g.cs
+=======
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/bin/Debug/netstandard2.0/Feedbackapp.deps.json
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/bin/Debug/netstandard2.0/Feedbackapp.dll
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/bin/Debug/netstandard2.0/ref/Feedbackapp.dll
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/bin/Debug/netstandard2.0/Feedbackapp.pdb
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.csprojAssemblyReference.cache
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/AuthenticationPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ClassEvaluationPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationHistoryPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/EvaluationPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MainPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/MenuPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/PinEvaluationPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/ShareQuestionPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/SignUpPage.xaml.g.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.AssemblyInfoInputs.cache
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.AssemblyInfo.cs
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.dll
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
+/Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
+>>>>>>> b80ec5a514ddc59ababa5e1ca4cae8db95346fd1
