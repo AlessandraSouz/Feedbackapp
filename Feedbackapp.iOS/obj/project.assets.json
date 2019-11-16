@@ -1372,20 +1372,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/victorhr/.nuget/packages/": {}
+    "/Users/alessandrasouza/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp.iOS/Feedbackapp.iOS.csproj",
+      "projectUniqueName": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.iOS/Feedbackapp.iOS.csproj",
       "projectName": "Feedbackapp.iOS",
-      "projectPath": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp.iOS/Feedbackapp.iOS.csproj",
-      "packagesPath": "/Users/victorhr/.nuget/packages/",
-      "outputPath": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp.iOS/obj/",
+      "projectPath": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.iOS/Feedbackapp.iOS.csproj",
+      "packagesPath": "/Users/alessandrasouza/.nuget/packages/",
+      "outputPath": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/victorhr/.config/NuGet/NuGet.Config"
+        "/Users/alessandrasouza/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1396,8 +1396,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/victorhr/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj": {
-              "projectPath": "/Users/victorhr/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj"
+            "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj": {
+              "projectPath": "/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Feedbackapp.csproj"
             }
           }
         }
