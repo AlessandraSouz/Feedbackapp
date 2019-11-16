@@ -32,7 +32,10 @@ namespace Feedbackapp.ViewModel
 
             var user = SQLiteFunctions.SelectUser(usr);
             if (user != null)
+            {
+                GlobalSettings.LoggedIn(user);
                 await NavigationFunctions.PushAsync(new MenuPage());
+            }
             else
                 DisplayAlert("Erro", "Usuário não cadastrado", "Ok!");
         }

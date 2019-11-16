@@ -19,7 +19,7 @@ namespace Feedbackapp.ViewModel
         {
             try
             {
-                Evaluations = await WebClientFunctions.GetEvaluations();
+                Evaluations = await WebClientFunctions.GetEvaluations(GlobalSettings.LoggedUser);
                 if (Evaluations == null || Evaluations.Count == 0)
                 {
                     if (await DisplayAlert("Erro", "Sem avaliações no momento", "Criar avaliação", "Ok"))

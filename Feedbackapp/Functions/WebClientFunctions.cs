@@ -12,7 +12,8 @@ namespace Feedbackapp.Functions
     public class WebClientFunctions
     {
         private static HttpClient Client { get; set; }
-        private static Uri BaseAddress = new Uri("https://feedbackapp-webapi.azurewebsites.net/api/evaluation/");
+        //private static Uri BaseAddress = new Uri("https://feedbackapp-webapi.azurewebsites.net/api/evaluation/");
+        private static Uri BaseAddress = new Uri("http://192.168.0.18:5000/api/evaluation/");
 
         static WebClientFunctions()
         {
@@ -49,10 +50,12 @@ namespace Feedbackapp.Functions
             await Client.PutAsync("", content);
         }
 
-        public static async Task<List<Evaluation>> GetEvaluations()
+        public static async Task<List<Evaluation>> GetEvaluations(User logged_user)
         {
             var result = new List<Evaluation>();
-            var response = await Client.GetAsync("");
+            var jsonContent = JsonConvert.SerializeObject(logged_user);
+            var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("history", content);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
