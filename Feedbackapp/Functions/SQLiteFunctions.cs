@@ -39,5 +39,14 @@ namespace Feedbackapp.Functions
 
             return lsUser.Where(p => p.Email == ((User)obj).Email && p.Password == ((User)obj).Password).FirstOrDefault();
         }
+
+        public static void UpdateUser(string email, string newPassword)
+        {
+            var lsUser = SQLiteConnection.Table<User>().ToList();
+            var user = lsUser.Where(p => p.Email == email).FirstOrDefault();
+            SQLiteConnection.Query<User>("DELETE FROM User WHERE Email = '?'", email);
+            user.Password = newPassword;
+            SQLiteConnection.Insert(user);
+        }
     }
 }

@@ -14,11 +14,13 @@ namespace Feedbackapp.ViewModel
         public String Password { get { return _password; } set { SetProperty(ref _password, value); } }
         public Command LoginCommand { get; set; }
         public Command SignUpCommand { get; set; }
+        public Command RecoverCommand { get; set; }
 
         public AuthenticationPageViewModel()
         {
             LoginCommand = new Command(LoginTapped);
             SignUpCommand = new Command(SignUpTapped);
+            RecoverCommand = new Command(RecoverTapped);
         }
 
         private async void LoginTapped()
@@ -43,6 +45,11 @@ namespace Feedbackapp.ViewModel
         private async void SignUpTapped()
         {
             await NavigationFunctions.PushAsync(new SignUpPage());
+        }
+
+        private async void RecoverTapped()
+        {
+            await NavigationFunctions.PushAsync(new PasswordRecoveryPage());
         }
     }
 }

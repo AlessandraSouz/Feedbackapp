@@ -44,3 +44,4 @@
 /Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/ref/Feedbackapp.dll
 /Users/victorhr/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/Feedbackapp.pdb
 >>>>>>> b80ec5a514ddc59ababa5e1ca4cae8db95346fd1
+/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/obj/Debug/netstandard2.0/View/PasswordRecoveryPage.xaml.g.cs

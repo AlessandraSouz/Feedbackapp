@@ -24,6 +24,7 @@
             </Grid>
             <Button Command="{Binding LoginCommand}" Text="Entrar" CornerRadius="5" TextColor="Black" BackgroundColor="{StaticResource Key=OpenClassGreen}" HorizontalOptions="Center" VerticalOptions="End"/>
             <Button Command="{Binding SignUpCommand}" Text="Cadastrar-se" TextColor="{StaticResource Key=OpenClassGreen}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button Command="{Binding RecoverCommand}" Text="Esqueceu sua senha?" TextColor="LightBlue" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End" FontSize="13"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

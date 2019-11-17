@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{83552A21-9E1F-4EC1-9F97-59AEDB1F9B57}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/Functions/WebClientFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/ViewModel/PasswordRecoveryPageViewModel.cs">
     <Files>
-      <File FileName="Feedbackapp/Functions/WebClientFunctions.cs" Line="16" Column="96" />
+      <File FileName="Feedbackapp/Functions/WebClientFunctions.cs" Line="24" Column="1" />
+      <File FileName="Feedbackapp/ViewModel/PasswordRecoveryPageViewModel.cs" Line="58" Column="14" />
+      <File FileName="Feedbackapp/Model/User.cs" Line="13" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Feedbackapp" expanded="True">
             <Node name="Feedbackapp" expanded="True">
-              <Node name="Functions" expanded="True">
-                <Node name="WebClientFunctions.cs" selected="True" />
+              <Node name="Functions" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="PasswordRecoveryPageViewModel.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -19,9 +24,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android PreferredExecutionTarget="Android.RQ8M409R4GM" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Functions/SQLiteFunctions.cs" relfile="Feedbackapp/Functions/SQLiteFunctions.cs" line="47" column="87" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
