@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Feedbackapp/ViewModel/PasswordRecoveryPageViewModel.cs">
     <Files>
       <File FileName="Feedbackapp/Functions/WebClientFunctions.cs" Line="24" Column="1" />
-      <File FileName="Feedbackapp/ViewModel/PasswordRecoveryPageViewModel.cs" Line="58" Column="14" />
-      <File FileName="Feedbackapp/Model/User.cs" Line="13" Column="36" />
+      <File FileName="Feedbackapp/ViewModel/PasswordRecoveryPageViewModel.cs" Line="74" Column="2" />
+      <File FileName="Feedbackapp/Model/User.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android PreferredExecutionTarget="Android.RQ8M409R4GM" />
+  <MonoDevelop.Ide.ItemProperties.Feedbackapp.Android PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/alessandrasouza/Projects/Feedbackapp/Feedbackapp/Functions/SQLiteFunctions.cs" relfile="Feedbackapp/Functions/SQLiteFunctions.cs" line="47" column="87" />

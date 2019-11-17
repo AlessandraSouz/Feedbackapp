@@ -12,8 +12,8 @@ namespace Feedbackapp.Functions
     public class WebClientFunctions
     {
         private static HttpClient Client { get; set; }
-        //private static Uri BaseAddress = new Uri("https://feedbackapp-webapi.azurewebsites.net/api/evaluation/");
-        private static Uri BaseAddress = new Uri("http://192.168.0.16:5000/api/");
+        private static Uri BaseAddress = new Uri("https://feedbackapp-webapi.azurewebsites.net/api/evaluation/");
+        //private static Uri BaseAddress = new Uri("http://192.168.0.16:5000/api/");
 
         static WebClientFunctions()
         {
