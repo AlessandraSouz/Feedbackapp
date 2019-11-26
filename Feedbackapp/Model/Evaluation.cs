@@ -10,9 +10,8 @@ namespace Feedbackapp.Model
         private string ies;
         private string curso;
         private ObservableCollection<Question> pergunta;
-        private decimal percentual;
-        private string name;
         private string prof_email;
+        private ObservableCollection<string> nomesAlunos;
 
         public int Id { get => id; set => id = value; }
         public string PIN { get => pin; set => pin = value; }
@@ -20,11 +19,10 @@ namespace Feedbackapp.Model
         public string Ies { get => ies; set => ies = value; }
         public string Curso { get => curso; set => curso = value; }
         public ObservableCollection<Question> Perguntas { get => pergunta; set => pergunta = value; }
-        public decimal Percentual { get => percentual; set => percentual = value; }
-        public string Name { get => name; set => name = value; }
         public string Prof_Email { get => prof_email; set => prof_email = value; }
+        public ObservableCollection<string> NomesAlunos { get => nomesAlunos; set => nomesAlunos = value; }
 
-        public Evaluation(int id, string pin, string turma, string ies, string curso, ObservableCollection<Question> pergunta, decimal percentual, string name, string prof_email)
+        public Evaluation(int id, string pin, string turma, string ies, string curso, ObservableCollection<Question> pergunta, string prof_email, ObservableCollection<string> nomesAlunos)
         {
             Id = id;
             PIN = pin;
@@ -32,12 +30,11 @@ namespace Feedbackapp.Model
             Ies = ies;
             Curso = curso;
             Perguntas = pergunta;
-            Percentual = percentual;
-            Name = name;
             Prof_Email = prof_email;
+            NomesAlunos = nomesAlunos;
         }
 
-        public Evaluation() : this(0, "", "", "", "", null, 0, "", "")
+        public Evaluation() : this(0, "", "", "", "", null, "", null)
         {
         }
     }

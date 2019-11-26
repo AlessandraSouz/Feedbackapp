@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout Padding="10">
             <Label Text="Nome:" TextColor="Black" FontSize="12" />
-            <Entry Text="{Binding Name}" Placeholder="(informação opcional)" />
+            <Entry Text="{Binding Name, Mode=TwoWay}" Placeholder="(informação opcional)" />
             <CollectionView ItemsSource="{Binding Evaluation.Perguntas}" x:Name="mainStack">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

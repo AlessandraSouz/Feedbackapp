@@ -11,9 +11,9 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Margin="0,0,0,10">
-                            <Label Text="{Binding Name, StringFormat='Nome do aluno: {0}'}" />
-                            <Label Text="{Binding Turma}" />
-                            <Label Text="{Binding Ies}" />
+                            <Label Text="{Binding PIN, StringFormat='PIN: {0}'}" TextColor="Black"/>
+                            <Label Text="{Binding Turma, StringFormat='Turma: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding Ies, StringFormat='IES: {0}'}" TextColor="Black" />
                             <Label Text="{Binding Percentual, StringFormat='Percentual da avaliação: {0}%'}" />
                             <BoxView Margin="0,5" HeightRequest="1" Color="Black" BackgroundColor="Black"/>
                             <StackLayout.GestureRecognizers>

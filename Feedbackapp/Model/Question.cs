@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Feedbackapp.Model
 {
@@ -6,12 +7,16 @@ namespace Feedbackapp.Model
     {
         private int id;
         private string pergunta;
-        private string feedback;
+        private List<string> feedbacks;
+        private decimal badPercent;
+        private decimal regularPercent;
+        private decimal goodPercent;
+        private decimal excellentPercent;
         private string pin;
 
         public int Id { get => id; set => id = value; }
         public string Pergunta { get => pergunta; set => pergunta = value; }
-        public string Feedback { get => feedback; set => feedback = value; }
+        public List<string> Feedbacks { get => feedbacks; set => feedbacks = value; }
         public string PIN { get => pin; set => pin = value; }
 
         private bool _badColored;
@@ -32,11 +37,16 @@ namespace Feedbackapp.Model
         private bool _excellentgrey;
         [JsonIgnore] public bool ExcellentGrey { get { return _excellentgrey; } set { _excellentgrey = value; } }
 
-        public Question(int id, string pergunta, string feedback, string pin)
+        public decimal BadPercent { get => badPercent; set => badPercent = value; }
+        public decimal RegularPercent { get => regularPercent; set => regularPercent = value; }
+        public decimal GoodPercent { get => goodPercent; set => goodPercent = value; }
+        public decimal ExcellentPercent { get => excellentPercent; set => excellentPercent = value; }
+
+        public Question(int id, string pergunta, List<string> feedbacks, string pin)
         {
             Id = id;
             Pergunta = pergunta;
-            Feedback = feedback;
+            Feedbacks = feedbacks;
             PIN = pin;
 
             BadColored = true;
@@ -50,7 +60,7 @@ namespace Feedbackapp.Model
             ExcellentGrey = false;
         }
 
-        public Question() : this(0, "", "", "")
+        public Question() : this(0, "", null, "")
         {
         }
     }

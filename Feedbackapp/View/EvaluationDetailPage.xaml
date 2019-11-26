@@ -19,7 +19,6 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-
                     <Label Text="Turma: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Label Text="{Binding Evaluation.Turma}" Grid.Column="1" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Label Text="Instituição: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
@@ -35,14 +34,42 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
-                                <Label Text="{Binding Pergunta}" TextColor="Black" FontSize="14"/>
-                                <Label Text="{Binding Feedback}" TextColor="Black" FontSize="14"/>
+                                <Label Text="{Binding Pergunta, StringFormat='Pergunta: {0}'}" TextColor="Black" Margin="5" FontSize="Medium"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="bad.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
+                                    <Label Text="{Binding BadPercent, StringFormat='Percentual: {0}%'}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Image Source="regular.png" Grid.Row="1" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
+                                    <Label Text="{Binding RegularPercent, StringFormat='Percentual: {0}%'}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Image Source="good.png" Grid.Row="2" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
+                                    <Label Text="{Binding GoodPercent, StringFormat='Percentual: {0}%'}" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Image Source="excellent.png" Grid.Row="3" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
+                                    <Label Text="{Binding ExcellentPercent, StringFormat='Percentual: {0}%'}" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                </Grid>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
 
-                <Label Text="{Binding Evaluation.Percentual, StringFormat='Percentual da avaliação: {0}%'}" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
+                <Label Text="Nomes dos alunos:" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
+                <CollectionView ItemsSource="{Binding Evaluation.NomesAlunos}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding }" TextColor="Black" FontSize="13"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

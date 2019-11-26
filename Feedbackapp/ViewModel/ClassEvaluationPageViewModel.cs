@@ -22,7 +22,7 @@ namespace Feedbackapp.ViewModel
         public ClassEvaluationPageViewModel(Evaluation evaluation)
         {
             Evaluation = evaluation;
-            Name = "";
+            Name = string.Empty;
 
             BadCommand = new Command<Question>(BadCommandTapped);
             RegularCommand = new Command<Question>(RegularCommandTapped);
@@ -37,13 +37,15 @@ namespace Feedbackapp.ViewModel
             //Remove da avaliação a pergunta sendo avaliada
             Evaluation.Perguntas.Remove(pergunta);
             //Adiciona a estrutura com o feedback novamente na avaliação
-            pergunta.Feedback = "Ruim";
+            pergunta.Feedbacks = new System.Collections.Generic.List<string>();
+            pergunta.Feedbacks.Clear();
+            pergunta.Feedbacks.Add("Ruim");
 
             pergunta.BadColored = true;
             pergunta.RegularColored = false;
             pergunta.GoodColored = false;
             pergunta.ExcellentColored = false;
-            
+
             pergunta.BadGrey = false;
             pergunta.RegularGrey = true;
             pergunta.GoodGrey = true;
@@ -57,13 +59,15 @@ namespace Feedbackapp.ViewModel
             //Remove da avaliação a pergunta sendo avaliada
             Evaluation.Perguntas.Remove(pergunta);
             //Adiciona a estrutura com o feedback novamente na avaliação
-            pergunta.Feedback = "Regular";
+            pergunta.Feedbacks = new System.Collections.Generic.List<string>();
+            pergunta.Feedbacks.Clear();
+            pergunta.Feedbacks.Add("Regular");
 
             pergunta.BadColored = false;
             pergunta.RegularColored = true;
             pergunta.GoodColored = false;
             pergunta.ExcellentColored = false;
-            
+
             pergunta.BadGrey = true;
             pergunta.RegularGrey = false;
             pergunta.GoodGrey = true;
@@ -77,13 +81,15 @@ namespace Feedbackapp.ViewModel
             //Remove da avaliação a pergunta sendo avaliada
             Evaluation.Perguntas.Remove(pergunta);
             //Adiciona a estrutura com o feedback novamente na avaliação
-            pergunta.Feedback = "Bom";
+            pergunta.Feedbacks = new System.Collections.Generic.List<string>();
+            pergunta.Feedbacks.Clear();
+            pergunta.Feedbacks.Add("Bom");
 
             pergunta.BadColored = false;
             pergunta.RegularColored = false;
             pergunta.GoodColored = true;
             pergunta.ExcellentColored = false;
-            
+
             pergunta.BadGrey = true;
             pergunta.RegularGrey = true;
             pergunta.GoodGrey = false;
@@ -97,13 +103,15 @@ namespace Feedbackapp.ViewModel
             //Remove da avaliação a pergunta sendo avaliada
             Evaluation.Perguntas.Remove(pergunta);
             //Adiciona a estrutura com o feedback novamente na avaliação
-            pergunta.Feedback = "Excelente";
+            pergunta.Feedbacks = new System.Collections.Generic.List<string>();
+            pergunta.Feedbacks.Clear();
+            pergunta.Feedbacks.Add("Excelente");
 
             pergunta.BadColored = false;
             pergunta.RegularColored = false;
             pergunta.GoodColored = false;
             pergunta.ExcellentColored = true;
-            
+
             pergunta.BadGrey = true;
             pergunta.RegularGrey = true;
             pergunta.GoodGrey = true;
@@ -116,6 +124,7 @@ namespace Feedbackapp.ViewModel
         {
             try
             {
+                Evaluation.NomesAlunos = new System.Collections.ObjectModel.ObservableCollection<string> { Name };
                 await WebClientFunctions.PutEvaluation(Evaluation);
                 DisplayAlert("Sucesso!", "Sua avaliação foi entregue com sucesso!", "Ok");
                 await NavigationFunctions.PopAsync();
