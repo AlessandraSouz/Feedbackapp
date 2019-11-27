@@ -17,16 +17,13 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Text="Turma: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Label Text="{Binding Evaluation.Turma}" Grid.Column="1" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Label Text="Instituição: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Label Text="{Binding Evaluation.Ies}" Grid.Column="1" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Label Text="{Binding Evaluation.Turno}" Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Label Text="{Binding Evaluation.Curso}" Grid.Column="1" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="Curso: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Label Text="{Binding Evaluation.Curso}" Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
                 </Grid>
 
                 <Label Text="Perguntas:" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
@@ -47,13 +44,13 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Image Source="bad.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
-                                    <Label Text="{Binding BadPercent, StringFormat='Percentual: {0}%'}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding BadCount, StringFormat='Quantidade: {0}'}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"/>
                                     <Image Source="regular.png" Grid.Row="1" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
-                                    <Label Text="{Binding RegularPercent, StringFormat='Percentual: {0}%'}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding RegularCount, StringFormat='Quantidade: {0}'}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
                                     <Image Source="good.png" Grid.Row="2" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
-                                    <Label Text="{Binding GoodPercent, StringFormat='Percentual: {0}%'}" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding GoodCount, StringFormat='Quantidade: {0}'}" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
                                     <Image Source="excellent.png" Grid.Row="3" Grid.Column="0" Aspect="AspectFit" HeightRequest="42"/>
-                                    <Label Text="{Binding ExcellentPercent, StringFormat='Percentual: {0}%'}" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding ExcellentCount, StringFormat='Quantidade: {0}'}" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"/>
                                 </Grid>
                             </StackLayout>
                         </DataTemplate>

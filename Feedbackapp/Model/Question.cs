@@ -8,10 +8,10 @@ namespace Feedbackapp.Model
         private int id;
         private string pergunta;
         private List<string> feedbacks;
-        private decimal badPercent;
-        private decimal regularPercent;
-        private decimal goodPercent;
-        private decimal excellentPercent;
+        private int badCount;
+        private int regularCount;
+        private int goodCount;
+        private int excellentCount;
         private string pin;
 
         public int Id { get => id; set => id = value; }
@@ -37,10 +37,10 @@ namespace Feedbackapp.Model
         private bool _excellentgrey;
         [JsonIgnore] public bool ExcellentGrey { get { return _excellentgrey; } set { _excellentgrey = value; } }
 
-        public decimal BadPercent { get => badPercent; set => badPercent = value; }
-        public decimal RegularPercent { get => regularPercent; set => regularPercent = value; }
-        public decimal GoodPercent { get => goodPercent; set => goodPercent = value; }
-        public decimal ExcellentPercent { get => excellentPercent; set => excellentPercent = value; }
+        public int BadCount { get => badCount; set => badCount = value; }
+        public int RegularCount { get => regularCount; set => regularCount = value; }
+        public int GoodCount { get => goodCount; set => goodCount = value; }
+        public int ExcellentCount { get => excellentCount; set => excellentCount = value; }
 
         public Question(int id, string pergunta, List<string> feedbacks, string pin)
         {

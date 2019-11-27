@@ -7,7 +7,11 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Label Text="{Binding PIN}" TextColor="Black" FontSize="36" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding PIN}" TextColor="Black" FontSize="36" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CopyCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

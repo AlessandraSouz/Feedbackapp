@@ -15,7 +15,7 @@
                             <Label Text="{Binding Turma, StringFormat='Turma: {0}'}" TextColor="Black" />
                             <Label Text="{Binding Ies, StringFormat='IES: {0}'}" TextColor="Black" />
                             <Label Text="{Binding Percentual, StringFormat='Percentual da avaliação: {0}%'}" />
-                            <BoxView Margin="0,5" HeightRequest="1" Color="Black" BackgroundColor="Black"/>
+                            <BoxView Margin="0" HeightRequest="1" Color="Black" BackgroundColor="Black"/>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={x:Reference mainCollection}, Path=BindingContext.EvaluationDetailsCommand}" CommandParameter="{Binding .}"/>
                             </StackLayout.GestureRecognizers>

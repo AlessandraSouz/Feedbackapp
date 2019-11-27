@@ -17,23 +17,20 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
                     <Label Text="Turma: " Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding Turma}" Grid.Column="1" Grid.Row="0" />
                     <Label Text="Instituição: " Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center" TextColor="Black"/>
                     <Entry Text="{Binding IES}" Grid.Column="1" Grid.Row="1" />
-                    <Label Text="Turno: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Entry Text="{Binding Turno}" Grid.Column="1" Grid.Row="2" />
-                    <Label Text="Curso: " Grid.Column="0" Grid.Row="3" VerticalTextAlignment="Center" TextColor="Black"/>
-                    <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="3" />
+                    <Label Text="Curso: " Grid.Column="0" Grid.Row="2" VerticalTextAlignment="Center" TextColor="Black"/>
+                    <Entry Text="{Binding Curso}" Grid.Column="1" Grid.Row="2" />
                 </Grid>
 
                 <Label Text="Pergunta" HorizontalOptions="Start" Margin="0,25,0,0" FontSize="Large" TextColor="Black"/>
                 <Entry Text="{Binding Pergunta}" HeightRequest="72" />
 
-                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Black" Margin="5" FontSize="18" Command="{Binding AddQuestion}" BackgroundColor="{StaticResource Key=OpenClassGreen}" HeightRequest="36" WidthRequest="36"/>
+                <Button Text="+" HorizontalOptions="End" VerticalOptions="EndAndExpand" TextColor="Black" Margin="5" FontSize="20" Command="{Binding AddQuestion}" BackgroundColor="{StaticResource Key=OpenClassGreen}" HeightRequest="52" WidthRequest="52"/>
 
                 <CollectionView ItemsSource="{Binding LsPerguntas}" HeightRequest="72">
                     <CollectionView.ItemTemplate>
